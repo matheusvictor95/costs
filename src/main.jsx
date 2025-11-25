@@ -5,17 +5,17 @@ import App from './App.jsx'
 import Company from './components/pages/Company.jsx'
 import Contact from './components/pages/Contact.jsx'
 import NewProject from './components/pages/NewProject.jsx'
+import Projects from './components/pages/Projects.jsx'
 import Home from './components/pages/Home.jsx'
-import { BrowserRouter, Route, Routes, Link } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import Container from './components/layout/Container.jsx'
+import Navbar from './components/layout/Navbar.jsx';
+import Footer from './components/layout/Footer.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
    <>
-        <Link to="/">Home</Link>
-        <Link to="/contato">Contato</Link>
-        <Link to="/empresa">Empresa</Link>
-        <Link to="/novoprojeto">Novo Projeto</Link>
+      <Navbar/>
      </>
       <Container customClass = "min-height">
         <Routes>
@@ -23,7 +23,9 @@ createRoot(document.getElementById('root')).render(
           <Route path="/empresa" element={<Company/>}/>
           <Route path="/contato" element={<Contact/>}/>
           <Route path="/novoprojeto" element={<NewProject/>}/>
+          <Route path="/pojetos" element={<Projects/>}/>
         </Routes>
       </Container>
+      <Footer/>
   </BrowserRouter>,
 )
