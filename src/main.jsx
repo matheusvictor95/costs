@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Link to="/empresa">Empresa</Link>
         <Link to="/novoprojeto">Novo Projeto</Link>
      </>
-      <Container>
+      <Container customClass = "min-height">
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/empresa" element={<Company/>}/>
