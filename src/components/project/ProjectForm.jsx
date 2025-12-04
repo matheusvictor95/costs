@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./ProjectForm.module.css";
+import styles from "./styles/ProjectForm.module.css";
 import Input from "../form/input";
 import Select from "../form/Select";
 import Button from "../form/SubmitButton";

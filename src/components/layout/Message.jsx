@@ -1,4 +1,4 @@
-import styles from './Message.module.css';
+import styles from './styles/Message.module.css';
 import {useState, useEffect} from 'react';
 
 function Message({ text, type }) {
