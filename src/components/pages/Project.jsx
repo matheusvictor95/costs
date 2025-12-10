@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import styles from './styles/Project.module.css';
 import { useParams } from 'react-router';
+import Container from '../layout/Container';
+import Loading from '../layout/Loading';
 
 function Project() {
     const { id } = useParams();
     const [project, setProject] = useState([]);
+    const [showProjectForm, setShowProjectForm] = useState(false);
 
    useEffect(() => {
     fetch(`http://localhost:5000/projects/${id}`, {
@@ -19,7 +22,43 @@ function Project() {
       .catch((err) => console.log(err));
       }, [id])
 
-    return <p>{project.name}</p>
+      function toggleProjectForm () {
+        setShowProjectForm(!showProjectForm);
+      }
+
+    return (
+      <>
+   {project.name ? (
+    <div className={styles.project_details}>
+    <Container customClass="column">
+    <div className={styles.details_container}>
+      <h1>Projeto: {project.name}</h1>
+      <button onClick={toggleProjectForm} className={styles.btn}>{!showProjectForm ? 'Editar Projeto' : 'Fechar'}</button>
+      {!showProjectForm ? (
+        <div className={styles.project_info}>
+          <p>
+            <span>Categoria:</span> {project.category?.name}
+          </p>
+          <p>
+            <span>Orçamento: </span> R${project.budget}
+          </p>
+            <p>
+            <span>Total Utilizado: </span> R${project.cost}
+          </p>
+        </div>
+      ) : (
+        <div className={styles.project_info}>
+          <p>Detalhes do Projeto</p>
+           </div>
+      )}
+    </div>
+    </Container>
+    </div>
+   ) : (
+    <Loading/>
+   )}
+  </>
+    );
 }
 
 export default Project;

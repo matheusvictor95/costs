@@ -25,7 +25,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/contato" element={<Contact/>}/>
           <Route path="/newproject" element={<NewProject/>}/>
           <Route path="/projects" element={<Projects/>}/>
-          <Route path="/project/:id" element={<Project/>}/>
+          <Route path="/project/edit/:id" element={<Project/>}/>
         </Routes>
       </Container>
       <Footer/>
