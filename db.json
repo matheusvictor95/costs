@@ -2,14 +2,21 @@
   "projects": [
     {
       "id": "36b8",
-      "name": "projeto",
-      "budget": "1200",
+      "name": "projeto de teste",
+      "budget": "1000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 300,
+      "services": [
+        {
+          "name": "teste",
+          "cost": "300",
+          "description": "teste",
+          "id": "0e97c772-5b3a-41bd-9eff-08bf0ff2e3e2"
+        }
+      ]
     }
   ],
   "categories": [
