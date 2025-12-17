@@ -1,20 +1,20 @@
 {
   "projects": [
     {
-      "id": "36b8",
-      "name": "projeto de teste",
-      "budget": "1000",
+      "id": "0653",
+      "name": "teste de mensagem",
+      "budget": "5000",
       "category": {
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 300,
+      "cost": 4000,
       "services": [
         {
-          "name": "teste",
-          "cost": "300",
-          "description": "teste",
-          "id": "0e97c772-5b3a-41bd-9eff-08bf0ff2e3e2"
+          "name": "teste de serviço",
+          "cost": "4000",
+          "description": "teste de serviço",
+          "id": "1d2c89b5-501f-4068-a20d-3aa682ec7517"
         }
       ]
     }

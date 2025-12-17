@@ -10,7 +10,7 @@ function ProjectCard({id, name, budget, category, handleRemove}) {
     
  return (
     <div className={styles.project_card}>
-        <h4 className={styles.project_h4}>{name}</h4>
+        <h4 className={styles.project_card_h4}>{name}</h4>
         <p>
             <span>Orçamento</span> R$:{budget}
         </p>
